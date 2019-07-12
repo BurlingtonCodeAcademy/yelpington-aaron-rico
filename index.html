@@ -1,18 +1,35 @@
-<script>
-let name = document.location.pathname.slice(1);
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aaron & Eric Present: YELPington</title>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <style>
+    #map {
+      width: 880px;
+      height: 520px;
+    }
+  </style>
+</head>
 
-if (!name) {
-  console.log("no place name specfied");
-} else {
-  console.log("fetching place named '" + name + "'");
-
-  fetch(name + '.json')
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (myText) {
-      console.log(myText);
+<body>
+  <h1>YELPington!</h1>
+  <div id="map"></div>
+  <script>
+    var map = L.map('map', {
+      center: [44.48, -73.21],
+      zoom: 10
     });
-}
-
-</script>
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi", {
+      layers: 'nexrad-n0r-900913',
+      format: 'image/png',
+      transparent: true,
+      attribution: "Weather data © 2012 IEM Nexrad"
+    }).addTo(map);
+    var marker = L.marker([44.48, -73.21]).addTo(map);
+    </script>
+  </body>
+</html>
