@@ -1,0 +1,58 @@
+#footer {
+    display: grid;
+    grid-area: footer;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-gap: 8px;
+    text-align: center;
+    background-color: lightslategray;
+    grid-template-areas: 
+      "f-header f-header"
+      "form-footer f-paragraph" 
+  
+  }
+  #footer h2 {
+    grid-area: f-header;
+    grid-column: span 2
+  }
+  
+  form {
+    grid-area: form-footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-gap: 3px;
+    grid-template-areas: 
+      "f-name f-email"
+      "f-subject f-subject"
+      "f-subject f-subject"
+      "f-submit ."
+  
+  }
+  
+  .f-paragraph {
+    grid-area: f-paragraph;
+    text-align: left;
+  }
+  
+  .f-contact {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #name {
+  grid-area: f-name;
+  
+  }
+  
+  #email {
+  grid-area: f-email;
+  }
+  
+  #subject {
+  grid-area: f-subject;
+  }
+  
+  #submit {
+  grid-area: f-submit;
