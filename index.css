@@ -1,3 +1,5 @@
+#mapId {height: 600px}
+
 #footer {
     display: grid;
     grid-area: footer;
@@ -56,3 +58,4 @@
   
   #submit {
   grid-area: f-submit;
+  }
