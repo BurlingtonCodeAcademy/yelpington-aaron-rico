@@ -1,18 +1,61 @@
-<script>
-let name = document.location.pathname.slice(1);
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+  <title>Aaron & Eric Present: YELPington</title>
+  
 
-if (!name) {
-  console.log("no place name specfied");
-} else {
-  console.log("fetching place named '" + name + "'");
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
 
-  fetch(name + '.json')
-    .then(function (response) {
-      return response.text();
-    })
-    .then(function (myText) {
-      console.log(myText);
-    });
-}
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+</head>
+<body>
+  <div id="mapId"></div>
+  <ul id="restaurantnames">
 
-</script>
+  </ul>
+  <script src="index.js">
+   
+  </script>
+</body>
+</html>
+
+<section id="footer">
+  <h2>Questions or Comments? <b>GET IN TOUCH</b></h2>
+    <form action="" method="get" class="form-example">
+      <input type="text" name="name" id="name" placeholder="Name">
+      <input type="email" name="email" id="email" placeholder="Email">
+      <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+      <input id="submit" type="submit" value="&#x2709 Send Message">
+    </form>
+
+      
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim neque volutpat ac tincidunt vitae semper. </p>
+    <div class="f-contact">
+        <link rel="stylesheet" href="index.css" type="text/css" />
+    <p><img src="https://img.icons8.com/small/15/000000/home.png">1234 Somewhere Road </br>
+      Burlington, VT 05401 </br>
+    USA</br>
+    <img src="https://img.icons8.com/ios/15/000000/phone-filled.png">(000) 000-0000</br>
+    <img src="https://img.icons8.com/material-two-tone/15/000000/filled-message.png">info@untitled.tld</br>
+    </p>
+    
+    <p><img src="https://img.icons8.com/material-two-tone/15/000000/twitter.png">@untitled</br>
+      <img src="https://img.icons8.com/material-two-tone/15/000000/instagram-new.png">instagram.com</br>
+      <img src="https://img.icons8.com/ios/15/000000/dribbble.png">dribbble.com</br>
+      <img src="https://img.icons8.com/material-two-tone/15/000000/facebook.png">facebook.com</br>
+      </p>
+        </div>
+      </div>
+</section>
+</body>
+</html>
+</html>
